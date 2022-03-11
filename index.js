@@ -45,7 +45,6 @@ app.put('/curso', async (req, res) => {
 //4. Crear una ruta DELETE /cursos que reciba el id de un curso como parámetro de la ruta y elimine el registro relacionado en la tabla cursos
 app.delete('/curso/:nombre', async (req, res) => {
   const { nombre } = req.params;
-  console.log(nombre);
   const response = await deleteCurso(nombre);
   if (response.length === 0) {
     return res
